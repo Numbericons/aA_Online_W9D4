@@ -4,7 +4,7 @@ class SessionsController
   end
 
   def create
-    user = User.find_by_credentials(params[:username], params[:password])
+    user = User.find_by_credentials(params[:user_name], params[:password])
 
     if user
       session[:session_token] = user.session_token
